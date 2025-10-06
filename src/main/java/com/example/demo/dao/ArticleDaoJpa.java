@@ -17,8 +17,7 @@ public class ArticleDaoJpa implements ArticleDao {
 
     @Override
     public List<Article> findAll() {
-        return em.createQuery("select a from Article a order by a.id", Article.class)
-                 .getResultList();
+        return em.createQuery("select a from Article a order by a.id", Article.class).getResultList();
     }
 
     @Override
